@@ -50,3 +50,16 @@ Example:
 Achieving a high score in TCS Wings 1 is ...
 ```
 
+## Deploy on Render
+
+1. Push your repo to GitHub.
+2. In Render, create a new Web Service and connect your GitHub repo.
+3. For Build Command use `npm install` (or leave blank to use render.yaml).
+4. For Start Command use `npm start`.
+5. Add environment variables in Render dashboard:
+   - `BACKEND_GEMINI_URL`
+   - `GOOGLE_API_KEY`
+6. Deploy.
+
+Your API endpoint will be `${your-service-url}/api/gemini`.
+
