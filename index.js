@@ -127,7 +127,7 @@ app.post('/api/gemini', async (req, res) => {
     const text = extractTextFromGeminiResponse(response.data);
     if (!text) {
       return res.status(502).json({
-        error: 'Gemini response did not contain a recognized text field.',
+        error: 'Response did not contain a recognized text field.',
         raw: response.data
       });
     }
